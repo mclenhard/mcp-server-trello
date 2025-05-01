@@ -278,3 +278,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Built with the [Model Context Protocol SDK](https://github.com/modelcontextprotocol/sdk)
 - Uses the [Trello REST API](https://developer.atlassian.com/cloud/trello/rest/)
+
+
+## Running evals
+
+The evals package loads an mcp client that then runs the index.ts file, so there is no need to rebuild between tests. You can load environment variables by prefixing the npx command. Full documentation can be found [here](https://www.mcpevals.io/docs).
+
+```bash
+OPENAI_API_KEY=your-key  npx mcp-eval src/evals/evals.ts src/index.ts
+```
